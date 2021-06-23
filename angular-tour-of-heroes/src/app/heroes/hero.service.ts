@@ -22,4 +22,8 @@ export class HeroService {
       return this.httpCliente.get<Hero>(this.url);
     }
   }
+
+  getHero(id: number){
+    return this.httpCliente.get<Hero>(this.url+"/"+id);
+  }
 }

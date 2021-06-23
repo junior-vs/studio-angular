@@ -1,2 +1,34 @@
 # studio-angular
 Studio angular
+
+# simulação de servidor api rest
+
+https://www.npmjs.com/package/json-server
+
+Create a db.json file with some data
+
+```json
+{
+  "posts": [
+    { "id": 1, "title": "json-server", "author": "typicode" }
+  ],
+  "comments": [
+    { "id": 1, "body": "some comment", "postId": 1 }
+  ],
+  "profile": { "name": "typicode" }
+}
+```
+
+Start JSON Server
+
+```bash
+json-server --watch db.json
+```
+
+Alternative port
+You can start JSON Server on other ports with the --port flag:
+
+```bash
+json-server --watch db.json --port 3004
+```
+
