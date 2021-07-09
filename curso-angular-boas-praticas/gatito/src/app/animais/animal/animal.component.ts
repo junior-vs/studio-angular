@@ -16,21 +16,17 @@ export class AnimalComponent implements OnInit {
 
   @Input() set url(url: string) {
     if (url.startsWith('data')) {
-      this.urlOriginal = url
+      this.urlOriginal = url;
     } else {
-      this.urlOriginal = `${API}/img${url}`;
+      this.urlOriginal = `${API}/imgs/${url}`;
     }
   }
-
-  get url(): string {
-    return this.urlOriginal;
-  }
-
-
-
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  get url(): string {
+    return this.urlOriginal;
+  }
 }
