@@ -15,8 +15,16 @@
         <em class="fa fa-comment-o fa-2x -mr-2 pull-left">{{
           animal.comments
         }}</em>
-        <em  (click)="excluir()" class="fa fa-trash-o fa-2x -mr-2 pull-left"></em>
+        <em
+          (click)="excluir()"
+          class="fa fa-trash-o fa-2x -mr-2 pull-left"
+        ></em>
       </small>
+      <app-comentarios
+        [id]="animalId"
+        *ngIf="animal.allowComments; else warnig"
+      ></app-comentarios>
+      <ng-template #warnig>Usuario não pode comentar</ng-template>
     </div>
   </div>
 </div>
