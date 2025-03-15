@@ -6,7 +6,7 @@
         <mat-button-toggle checked> Ida e Volta </mat-button-toggle>
         <mat-button-toggle> Somente Ida </mat-button-toggle>
       </mat-button-toggle-group>
-      <mat-chip-listbox aria-label="Seleção de Passageiros">
+      <mat-chip-listbox aria-label="Seleção de Passageiros" (click)="openDialog()">
         <mat-chip-option selected>1 Adulto</mat-chip-option>
         <mat-chip-option>Classe Econômica</mat-chip-option>
       </mat-chip-listbox>

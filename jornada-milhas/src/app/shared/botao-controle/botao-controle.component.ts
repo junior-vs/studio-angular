@@ -15,31 +15,8 @@ export class BotaoControleComponent implements OnInit {
   @Input() operacao: 'incrementar' | 'decrementar' = 'incrementar';
   @Input() src = '';
   @Input() alt = '';
-  @Input() title = '';
+
 
   ngOnInit(): void {
-    // Set default title based on operation if not provided
-    if (!this.title) {
-      this.title =
-        this.operacao === 'incrementar'
-          ? 'Incrementar quantidade'
-          : 'Decrementar quantidade';
-    }
-
-    // Set default src if not provided
-    if (!this.src) {
-      this.src =
-        this.operacao === 'incrementar'
-          ? 'assets/icones/add_circle.png'
-          : 'assets/icones/do_not_disturb_on.png';
-    }
-
-    // Set default alt if not provided
-    if (!this.alt) {
-      this.alt =
-        this.operacao === 'incrementar'
-          ? 'Ícone do operador de adição'
-          : 'Ícone do operador de subtração';
-    }
   }
 }
