@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import {
   MatButtonToggleModule
 } from '@angular/material/button-toggle';
@@ -6,6 +6,11 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { CardComponent } from '../card/card.component';
+import { MatChip, MatChipsModule } from '@angular/material/chips';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatDialog } from '@angular/material/dialog';
+import { ModalComponent } from '../modal/modal.component';
+import { provideNativeDateAdapter } from '@angular/material/core';
 
 // mat-button-toggle-group
 @Component({
@@ -16,10 +21,20 @@ import { CardComponent } from '../card/card.component';
     MatIconModule,
     MatFormFieldModule,
     MatInputModule,
+    MatChipsModule,
+    MatDatepickerModule,
   ],
   templateUrl: './form-busca.component.html',
   styleUrl: './form-busca.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  providers: [provideNativeDateAdapter()],
 })
 export class FormBuscaComponent {
+  constructor(public dialog: MatDialog) {}
 
+  openDialog() {
+    this.dialog.open(ModalComponent, {
+      width: '50%',
+    });
+  }
 }
