@@ -1,0 +1,31 @@
+// Variáveis
+$border-radius: 16px;
+$border-color: #0D6EFD;
+$background-color: #F8F9FA;
+$box-shadow-color: rgba(61, 139, 253, 0.15);
+$container-width: 684px;
+$container-padding: 56px 134px;
+$container-margin-top: 80px;
+
+// Mixins
+@mixin box-shadow($color) {
+  box-shadow: 0px 8px 16px 0px $color;
+}
+
+@mixin border($radius, $color) {
+  border-radius: $radius;
+  border: 1px solid $color;
+}
+
+// Estilos
+.container {
+  @include border($border-radius, $border-color);
+  background: $background-color;
+  @include box-shadow($box-shadow-color);
+  width: $container-width;
+  max-width: 90%;
+  margin: 0 auto;
+  padding: $container-padding;
+  margin-top: $container-margin-top;
+  box-sizing: border-box;
+}
