@@ -7,6 +7,7 @@ import { ContatoComponent } from "./componentes/contato/contato.component";
 import { SeparadorComponent } from "./componentes/separador/separador.component";
 import { Contato } from './core/model/contato';
 import { ContatoService } from './core/services/contato.service';
+import { FormularioContatoComponent } from "./paginas/formulario-contato/formulario-contato.component";
 
 @Component({
   selector: 'app-root',
@@ -17,7 +18,8 @@ import { ContatoService } from './core/services/contato.service';
     SeparadorComponent,
     ContatoComponent,
     FormsModule,
-  ],
+    FormularioContatoComponent
+],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })

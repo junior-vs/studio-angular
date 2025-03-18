@@ -1,5 +1,10 @@
 # Indexa
 
+
+## Curso Alura 
+### Referencias
+  [repositorio git](https://github.com/alura-cursos/3496-angular-indexa)
+
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.1.
 
 ## Development server
