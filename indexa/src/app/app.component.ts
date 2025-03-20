@@ -11,8 +11,8 @@ import { FormularioContatoComponent } from './paginas/formulario-contato/formula
   imports: [
     CommonModule,
     RouterOutlet,
-    FormularioContatoComponent,
-    ListaContatosComponent,
+
+
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',

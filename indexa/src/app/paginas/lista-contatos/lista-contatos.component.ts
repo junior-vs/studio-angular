@@ -32,8 +32,9 @@ export class ListaContatosComponent {
   constructor(private contatoService: ContatoService) {}
 
   ngOnInit(): void {
-    this.contatoService.getContatos().subscribe((data: Contato[]) => {
+    this.contatoService.obterContatos().subscribe((data: Contato[]) => {
       this.contatos = data;
+      console.log(this.contatos);
     });
   }
 
