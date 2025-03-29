@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-card-depoimentos',
-  imports: [MatCard, MatCardActions, MatCardContent],
+  imports: [MatCard, MatCardContent],
   templateUrl: './card-depoimentos.component.html',
   styleUrl: './card-depoimentos.component.scss',
 })
