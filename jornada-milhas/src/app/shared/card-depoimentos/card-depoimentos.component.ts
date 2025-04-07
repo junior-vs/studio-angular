@@ -3,7 +3,8 @@ import {
   MatCardActions,
   MatCardContent,
 } from '@angular/material/card';
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Depoimento } from '../../core/models/depoimento.model';
 
 @Component({
   selector: 'app-card-depoimentos',
@@ -12,10 +13,5 @@ import { Component } from '@angular/core';
   styleUrl: './card-depoimentos.component.scss',
 })
 export class CardDepoimentosComponent {
-  depoimento: string = `
-    Recomendo fortemente a agência de viagens Jornada.
-    Eles oferecem um serviço personalizado e de alta qualidade
-    que excedeu minhas expectativas em minha última viagem.
-  `;
-  autoria: string = 'Mariana Faustino';
+  @Input() depoimento!: Depoimento;
 }
