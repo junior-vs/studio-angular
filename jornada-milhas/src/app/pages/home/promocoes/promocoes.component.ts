@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CardBuscaComponent } from "../../../shared/card-busca/card-busca.component";
 import { Promocao } from '../../../core/models/promocao.model';
 import { PromocaoService } from '../../../core/services/promocao.service';
@@ -10,7 +10,7 @@ import { CommonModule } from '@angular/common';
   templateUrl: './promocoes.component.html',
   styleUrl: './promocoes.component.scss'
 })
-export class PromocoesComponent {
+export class PromocoesComponent implements OnInit {
 
     promocoes:Promocao[]=[];
 
@@ -19,7 +19,7 @@ export class PromocoesComponent {
 
     }
     ngOnInit(): void {
-      this.service.lista().subscribe((data:Promocao[]) => {
+      this.service.listar().subscribe((data:Promocao[]) => {
         this.promocoes = data;
       });
     }

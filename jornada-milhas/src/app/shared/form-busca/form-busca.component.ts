@@ -10,11 +10,16 @@ import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { ModalComponent } from '../modal/modal.component';
 import { provideNativeDateAdapter } from '@angular/material/core';
 import { MatButtonModule } from '@angular/material/button';
+import { FormBuscaService } from '../../core/services/form-busca.service';
+import { ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 // mat-button-toggle-group
 @Component({
   selector: 'app-form-busca',
   imports: [
+    CommonModule,
+        ReactiveFormsModule,
     CardComponent,
     MatButtonToggleModule,
     MatIconModule,
@@ -31,11 +36,10 @@ import { MatButtonModule } from '@angular/material/button';
   providers: [provideNativeDateAdapter()],
 })
 export class FormBuscaComponent {
-  constructor(public dialog: MatDialog) {}
 
-  openDialog() {
-    this.dialog.open(ModalComponent, {
-      width: '50%',
-    });
+  constructor(public formBuscaSerice: FormBuscaService) {}
+
+  buscar() {
+    console.log(this.formBuscaSerice.formBusca.value);
   }
 }
