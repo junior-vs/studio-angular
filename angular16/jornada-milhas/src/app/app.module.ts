@@ -24,10 +24,19 @@ import { LoginComponent } from './pages/login/login.component';
 import { BannerComponent } from "./shared/banner/banner.component";
 import { CadastroComponent } from './pages/cadastro/cadastro.component';
 import { MatRadioModule } from '@angular/material/radio';
+import { FormBaseComponent } from './shared/form-base/form-base.component';
+import { ContainerComponent } from "./shared/container/container.component";
+import { DropdownUFComponent } from "./shared/dropdown-uf/dropdown-uf.component";
+import { MatDividerModule } from '@angular/material/divider';
 
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, CadastroComponent],
+  declarations: [
+    AppComponent,
+    LoginComponent,
+    CadastroComponent,
+    FormBaseComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -50,6 +59,9 @@ import { MatRadioModule } from '@angular/material/radio';
     BannerComponent,
     MatDatepickerModule,
     MatRadioModule,
+    ContainerComponent,
+    DropdownUFComponent,
+    MatDividerModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
