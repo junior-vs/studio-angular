@@ -1,29 +1,21 @@
 import { Component, OnInit } from '@angular/core';
-import { Form, FormBuilder, FormGroup } from '@angular/forms';
+mport { Form, FormBuilder, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
+import { CadastroService } from 'src/app/core/services/cadastro.service';
+import { FormularioService } from 'src/app/core/services/formulario.service';
 
 @Component({
   selector: 'app-cadastro',
   templateUrl: './cadastro.component.html',
   styleUrls: ['./cadastro.component.scss'],
 })
-export class CadastroComponent implements OnInit {
-  cadastroForm!: FormGroup;
+export class CadastroComponent {
+  constructor(
+    private formularioService: FormularioService,
+    private cadastroService: CadastroService,
+    private router: Router
+  ) {}
 
-  generoOption: string = '';
-  generoOptions: string[] = ['Masculino', 'Feminino', 'Outros', 'Prefiro nao dizer'];
-
-  constructor(private formBuider: FormBuilder) {}
-
-  ngOnInit(): void {
-    this.cadastroForm = this.formBuider.group({
-      nome: [null],
-      email: [null],
-      dataNascimento: [null],
-      genero: [null],
-      senha: [null],
-      confirmarSenha: [null],
-    });
-  }
   cadastrar() {
     // Lógica de cadastro
     console.log('Cadastro realizado com sucesso!');
