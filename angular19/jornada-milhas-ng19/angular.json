@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "jornada-milha-19": {
+    "jornada-milhas-ng19": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/jornada-milha-19",
+            "outputPath": "dist/jornada-milhas-ng19",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -65,10 +65,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "jornada-milha-19:build:production"
+              "buildTarget": "jornada-milhas-ng19:build:production"
             },
             "development": {
-              "buildTarget": "jornada-milha-19:build:development"
+              "buildTarget": "jornada-milhas-ng19:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -102,6 +102,6 @@
     }
   },
   "cli": {
-    "analytics": "11096cf0-ecd5-4eaa-93ba-0a08482209c6"
+    "analytics": "533b6397-1b6c-4274-9b9d-f6bf108daee0"
   }
 }
