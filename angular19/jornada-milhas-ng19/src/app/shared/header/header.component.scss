@@ -1,0 +1,24 @@
+@use '@angular/material' as mat;
+.app-header {
+
+  button {
+    margin: 0 16px;
+  }
+
+  .spacer {
+    flex: 1 1 auto;
+  }
+
+  .mat-toolbar {
+
+
+    padding: 0 256px;
+  }
+
+  .mat-mdc-outlined-button:not(:disabled) {}
+
+  @include mat.toolbar-overrides((container-background-color: black,
+      container-text-color: white,
+    ))
+}
+
